@@ -10,11 +10,12 @@
             padding: 0;
         }
         header{
-            height: 881px;
+            height: 863px;
             background-image: url("./images/img1.png");
             background-repeat: no-repeat;
             background-size:cover;
-            background-position-y: -140px;
+            background-position-y: -138px;
+            background-position: fixed;
             /* padding: 30px; */
         }
         
@@ -30,6 +31,8 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position-y: -75px;
+
+            border: 1px solid rgb(243, 243, 243);
         }
         /* nav{
             background-image: url("./images/white.png");
@@ -47,8 +50,8 @@
             /* margin-right: 20px; */
         }
         .b1:hover{
-            background-color: rgb(219, 216, 216);
-            border: 1px solid rgb(219, 216, 216);
+            background-color: rgb(246, 245, 245);
+            border: 1px solid rgb(246, 245, 245);
             cursor: pointer;
         }
         .b2{
@@ -115,15 +118,24 @@
             gap: 10px;
         }
         .address{
-            padding-left: 20px;
+            padding-left: 55px;
             
-            width: 480px;
+            width: 445px;
+            height: 100%;
             
             border: 0px;
 
             font-size: 18px;
             font-family: system-ui;
             font-weight: 600;
+
+            position: relative;
+        }
+        #i1{
+            position:absolute;
+            font-size: 20px;
+            top: 51.6%;
+            left: 3.3%;
         }
         .deli-time{
             padding-left: 20px;
@@ -135,6 +147,8 @@
             font-size: 18px;
             font-family: system-ui;
             font-weight: 600;
+
+            cursor: pointer;
         }
         .deli-search{
             padding-left: 16px;
@@ -168,13 +182,16 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap:6px;
             
         }
         img{
             width: 100%;
         }
         h2{
-            font-size: 26px;
+            font-size: 27px;
+            font-stretch:extra-expanded;
+            font-weight: 600;
             font-family: sans-serif;
             padding-top: 1.5%;
         }
@@ -192,7 +209,40 @@
             flex-direction: row;
             justify-content: space-between;
         }
-        
+
+        .section3{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 1%;
+            padding-left: 2%;
+            width: 97%;
+            /* color: brown; */
+        }
+        .col-25{
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            gap: 24px;
+            font-size: 17px;
+            font-family: system-ui;
+        }
+        a{
+            color: black;
+        }
+        .section4{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 3%;
+            padding-left: 2%;
+            width: 97%;
+        }
+        .sec4child2{
+            display: flex;
+            flex-direction: row;
+            padding-top: 1%;
+        }
         </style>
 </head>
 
@@ -216,7 +266,10 @@
         <div class="delivery-details">
             <h1 style="font-size: 50px; font-family: sans-serif; font-weight: bolder;">Order delivery near you</h1>
             <div class="delivery-details-child">
-                <input type="text" placeholder="Enter delivery address" class="address">    
+                <div>
+                    <input type="text" placeholder="Enter delivery address" class="address">
+                    <i class="fa-solid fa-location-dot" id="i1"></i>    
+                </div>
                 <select name="schedule" id="" class="deli-time">
                     <option value="">Deliver Now</option>
                     <option value="">Schedule for later</option>
@@ -232,17 +285,17 @@
         <div class="col-33">
             <img src="https://www.ubereats.com/_static/88d55f7112efe55f.webp" alt="">
             <h2>Feed your employees</h2>
-            <a href="https://www.uber.com/business/eats" style="color: black;font-family: system-ui;">Create a business account</a>
+            <a href="https://www.uber.com/business/eats" style="color: black;font-weight: 600;font-family: system-ui;">Create a business account</a>
         </div>
         <div class="col-33">
             <img src="https://www.ubereats.com/_static/711d51ca1b458931.webp" alt="">
             <h2>Your restaurant, delivered</h2>
-            <a href="https://merchants.ubereats.com/s/signup/?_ga=2.166613118.1336219202.1718880538-7963793.1718880538s" style="color: black;font-family: system-ui;">Add your restaurant</a>
+            <a href="https://merchants.ubereats.com/s/signup/?_ga=2.166613118.1336219202.1718880538-7963793.1718880538s" style="color: black;font-weight: 600;font-family: system-ui;">Add your restaurant</a>
         </div>
         <div class="col-33">
             <img src="https://www.ubereats.com/_static/16522a701585873b.webp" alt="">
             <h2>Deliver with Uber Eats</h2>
-            <a href="https://www.uber.com/drive/delivery/" style="color: black;font-family: system-ui;">Sign up to deliver</a>
+            <a href="https://www.uber.com/drive/delivery/" style="color: black;font-weight: 600;font-family: system-ui;">Sign up to deliver</a>
         </div>
     </div>
 
@@ -251,8 +304,8 @@
             <div class="col">
                 <h1 style="font-size: 35px; font-family: sans-serif; font-weight: bolder; padding-top: 39px;">Cities near me</h1>
             </div>
-            <div class="col" style="padding-top: 39px;">
-                <a href="https://www.ubereats.com/location" style="color: black;font-family: system-ui;">View all 500+ cities</a>
+            <div class="col" style="padding-top: 50px;">
+                <a href="https://www.ubereats.com/location" style="font-size: 17px;font-weight: 500;color: black;font-family: system-ui;">View all 500+ cities</a>
             </div>
         </div>
         <div class="sec2child2">
@@ -260,8 +313,95 @@
         </div>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="section3">
+        <div class="col-25">
+            <a href="">Akron</a>
+            <a href="">Albuquerque</a>
+            <a href="">Bridgeport</a>
+            <a href="">Concord</a>
+            <a href="">Dayton</a>
+            <a href="">El Paso</a>
+        </div>
+        <div class="col-25">
+            <a href="">Hartford</a>
+            <a href="">Houston</a>
+            <a href="">Indianapolis</a>
+            <a href="">McAllen</a>
+            <a href="">Mesa</a>
+            <a href="">Milwaukee</a>
+        </div>
+        <div class="col-25">
+            <a href="">Nashville</a>
+            <a href="">New Orleans</a>
+            <a href="">Oklahoma City</a>
+            <a href="">Omaha</a>
+            <a href="">Orlando</a>
+            <a href="">Palm Bay</a>
+        </div>
+        <div class="col-25">
+            <a href="">Providence</a>
+            <a href="">Queens</a>
+            <a href="">San Antonio</a>
+            <a href="">Stony Brook</a>
+            <a href="">Tucson</a>
+            <a href="">West Hollywood</a>
+        </div>
+    </div>
 
+    <div class="section4">
+        <div class="sec4child1">
+            <div class="sec2child1 ">
+                <div class="col">
+                    <h1 style="font-size: 35px; font-family: sans-serif; font-weight: bolder; padding-top: 39px;">Countries with Uber Eats</h1>
+                </div>
+                <div class="col" style="padding-top: 50px; margin-right: 1%;">
+                    <a href="https://www.ubereats.com/location" style="font-size: 17px;font-weight: 500;color: black;font-family: system-ui;">View all countries</a>
+                </div>
+            </div>
+        </div>
+        <div class="sec4child2">
+            <div class="col-25">
+                <a href="">Australia</a>
+                <a href="">Belgium</a>
+                <a href="">Canada</a>
+                <a href="">Chile</a>
+                <a href="">Costa Rica</a>
+                <a href="">Dominican Republic</a>
+                <a href="">Ecuador</a>
+                <a href="">El Salvador</a>
+            </div>
+            <div class="col-25">
+                <a href="">France</a>
+                <a href="">Germany</a>
+                <a href="">Guatemala</a>
+                <a href="">Ireland</a>
+                <a href="">Italy</a>
+                <a href="">Japan</a>
+                <a href="">Kenya</a>
+                <a href="">Mexico</a>
+            </div>
+            <div class="col-25">
+                <a href="">Netherlands</a>
+                <a href="">New Zealand</a>
+                <a href="">Panama</a>
+                <a href="">Poland</a>
+                <a href="">Portugal</a>
+                <a href="">South Africa</a>
+                <a href="">Spain</a>
+                <a href="">Sri Lanka</a>
+            </div>
+            <div class="col-25">
+                <a href="">Sweden</a>
+                <a href="">Switzerland</a>
+                <a href="">Taiwan (ROC)</a>
+                <a href="">United Kingdom</a>
+                <a href="">United States</a>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="https://kit.fontawesome.com/e0a3d0d2cc.js" crossorigin="anonymous"></script>
 </body>
 </html>
