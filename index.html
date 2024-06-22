@@ -14,7 +14,7 @@
             background-image: url("./images/img1.png");
             background-repeat: no-repeat;
             background-size:cover;
-            background-position-y: -138px;
+            background-position-y: -140px;
             background-position: fixed;
             /* padding: 30px; */
         }
@@ -26,14 +26,26 @@
             justify-content: space-between;
             position: sticky;
             top: 0;
-
             background-color: white;
+            border: 1px solid rgb(243, 243, 243);
+            z-index: 2;
+            /* background-image: url("./images/img1.png"); */
+
+            /* transition: background-image 0.3s ease; */
+
+            /* background-color: transparent; */
             background-repeat: no-repeat;
             background-size: cover;
             background-position-y: -75px;
 
-            border: 1px solid rgb(243, 243, 243);
         }
+        /* nav.scrolled{
+            background-image: url("./images/white.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(243, 243, 243);
+        } */
         /* nav{
             background-image: url("./images/white.png");
         } */
@@ -54,6 +66,10 @@
             border: 1px solid rgb(246, 245, 245);
             cursor: pointer;
         }
+        .b1:active{
+            background-color: rgb(227, 220, 220);
+            border: 1px solid rgb(227, 220, 220);
+        }
         .b2{
             height: 36px;
             width: 73.69px;
@@ -61,20 +77,24 @@
             padding-bottom: 3px;
             /* font-weight: bold; */
             background-color: black;
+            border: 1px solid black;
             border-radius: 30px;
             font-size: 14.5px;
             font-family: system-ui;
             font-weight: 600;
-            border: 1px solid black;
         }
         .b2:hover{
             background-color: rgb(40, 37, 37);
             border: 1px solid rgb(40, 37, 37);
             cursor: pointer;
         }
-        .b2:focus{
+        /* .b2:focus{
             background-color: rgb(114, 105, 105);
             border: 1px solid rgb(114, 105, 105);
+        } */
+        .b2:active{
+            background-color: rgb(70, 61, 61);
+            border: 1px solid rgb(70, 61, 61);
         }
         .col-50{
             display: flex;
@@ -117,6 +137,12 @@
             flex-direction: row;
             gap: 10px;
         }
+        #i1{
+            position:absolute;
+            font-size: 20px;
+            top: 51.6%;
+            left: 3.3%;
+        }
         .address{
             padding-left: 55px;
             
@@ -131,16 +157,16 @@
 
             position: relative;
         }
-        #i1{
+        #i2{
             position:absolute;
             font-size: 20px;
             top: 51.6%;
-            left: 3.3%;
+            left: 29.9%;
         }
         .deli-time{
-            padding-left: 20px;
+            padding-left: 40px;
 
-            width: 190px;
+            width: 185px;
             
             border: 0px;
             
@@ -168,6 +194,10 @@
             background-color: rgb(40, 37, 37);
             border: 1px solid rgb(40, 37, 37);
             cursor: pointer;
+        }
+        .deli-search:active{
+            background-color: rgb(70, 61, 61);
+            border: 1px solid rgb(70, 61, 61);
         }
         .section1{
             width: 99%;
@@ -223,7 +253,7 @@
             display: flex;
             flex-direction: column;
             width: 25%;
-            gap: 24px;
+            gap: 25px;
             font-size: 17px;
             font-family: system-ui;
         }
@@ -241,8 +271,53 @@
         .sec4child2{
             display: flex;
             flex-direction: row;
-            padding-top: 1%;
+            padding-top: 0.8%;
         }
+        .section5{
+            display: flex;
+            flex-direction: row;
+        }
+        .section5a{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-top: 3.6%;
+            margin-left: 18.4%;
+            /* margin-right: 20%; */
+            gap: 190px;
+        }
+        .sec5child1{
+            width: 134px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* padding-left: 2%; */
+
+        }
+        .sec5child2{
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            gap: 5%;
+        }
+        .section5b{
+            display: flex;
+            width: 700px;
+            flex-direction: row;
+            gap: 50px;
+            justify-content: space-between;
+            margin-top: 3.4%;
+            margin-right: 26%;
+        }
+        .col-5{
+            display: flex;
+            flex-direction: column;
+            color: black;
+            font-size: 17px;
+            gap: 18px;
+            font-family: system-ui;
+        }
+
         </style>
 </head>
 
@@ -274,6 +349,7 @@
                     <option value="">Deliver Now</option>
                     <option value="">Schedule for later</option>
                 </select>
+                <i class="fa-solid fa-clock" id="i2"></i>
                 <button class="deli-search">Search here</button><br>
             </div>
             <div>
@@ -400,8 +476,77 @@
         </div>
     </div>
 
+    <hr style="margin-top: 5.7%;">
+    <div class="section5">
+        <div class="section5a">
+            <div class="sec5child1">
+                <div>
+                    <img src="https://www.ubereats.com/_static/97c43f8974e6c876.svg" alt="" style="width: 100%;">
+                </div>
+            </div>
+            <div class="sec5child2">
+                <div style="width: 45%;">
+                    <a href="https://apps.apple.com/us/app/uber-eats-food-delivery/id1058959277"><img src="https://www.ubereats.com/_static/783bb4a82e5be29e.svg" alt=""></a>
+                </div>
+                <div style="width: 45%;">
+                    <a href="https://play.google.com/store/apps/details?id=com.ubercab.eats"><img src="https://www.ubereats.com/_static/163bdc9b0f1e7c9e.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="section5b">
+            <div class="col-5">
+                <a href="">Get Help</a>
+                <a href="">Buy gift cards</a>
+                <a href="">Add your restaurant</a>
+                <a href="">Sign up to deliver</a>
+                <a href="">Create a business account</a>
+                <a href="">Promotions</a>
+            </div>
+            <div class="col-5">
+                <a href="">Restaurants near me</a>
+                <a href="">View all cities</a>
+                <a href="">View all countries</a>
+                <a href="">Pickup near me</a>
+                <a href="">About Uber Eats</a>
+                <a href="">Shop groceries</a>
+                <a href=""><i class="fa-solid fa-language"></i> English</a>
+            </div>
+        </div>
+    </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div style="margin-top: 2%;">
+        <hr>
+    </div>
+
+    <footer style="display: flex;flex-direction: column;">
+        <div class="foot1" style="display: flex;flex-direction: row;justify-content: space-between;margin: 2% 18%">
+            <div class="foot1a"  style="display: flex;gap: 20px;font-size: 20px;">
+                <a href="https://www.facebook.com/ubereats"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.twitter.com/ubereats"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/ubereats"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="foot1b" style="display: flex;gap: 25px; font-family: system-ui;font-size: 15px;">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms</a>
+                <a href="">Pricing</a>
+                <a href="">Do not sell or share my personal information</a>
+            </div>
+        </div>
+        <div class="foot2">
+        </div>
+    </footer>
+    <br><br><br><br>
+
     <script src="https://kit.fontawesome.com/e0a3d0d2cc.js" crossorigin="anonymous"></script>
+    <!-- <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 3) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script> -->
 </body>
 </html>
